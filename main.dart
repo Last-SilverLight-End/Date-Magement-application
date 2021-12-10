@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,34 +12,33 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
-      home: Scaffold(
-        appBar : AppBar(
-          title : Text('Date Management'),
-          centerTitle: true,
-          elevation: 0.0,
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.search,),
-              onPressed: (){
-                print('Click');
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.more_vert,),
-              onPressed: (){
-                print('Click');
-              },
-            )
-          ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Date Management'),
+        centerTitle: true, // 중앙 정렬
+        elevation: 0.0,
+        leading: IconButton(
+          icon: Icon(Icons.menu), // 햄버거버튼 아이콘 생성
+          onPressed: () {
+            // 아이콘 버튼 실행
+            print('menu button is clicked');
+          },
+
+        ),
+      actions: <Widget>[
+        IconButton(
+          onPressed: (){},
+          icon: Icon(Icons.search,),
+        ),
+        IconButton(
+          icon: Icon(Icons.more_vert,),
+          onPressed: (){
+            print('Click');
+            },
+        )
+      ],
       ),
         drawer: Drawer(
           child: ListView(
@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
                 ),
                 title: Text('Home'),
                 onTap: () {
-                  print('Home click');
+                  print('Home is clicked');
                 },
                 trailing: Icon(Icons.add),
               ),
@@ -62,11 +62,7 @@ class MyApp extends StatelessWidget {
                 ),
                 title: Text('Setting'),
                 onTap: () {
-                  print('Setting Click');
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => SettingTab()),
-                  );
+                  print('Setting is clicked');
                 },
                 trailing: Icon(Icons.add),
               ),
@@ -77,29 +73,115 @@ class MyApp extends StatelessWidget {
                 ),
                 title: Text('Q&A'),
                 onTap: () {
-                  print('Q&A click');
+                  print('Q&A is clicked');
                 },
                 trailing: Icon(Icons.add),
               )
             ],
           ),
         ),
-    )
     );
   }
 }
 
 
-class SettingTab extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Setting'),),
-      );
-  }
-}
 
+
+
+
+
+//
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+//
+//   // This widget is the root of your application.
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//         title: 'Flutter Demo',
+//         theme: ThemeData(
+//           primarySwatch: Colors.red,
+//         ),
+//         home: Scaffold(
+//           appBar : AppBar(
+//             title : Text('Date Management'),
+//             centerTitle: true,
+//             elevation: 0.0,
+//             actions: <Widget>[
+//               IconButton(
+//                 icon: Icon(Icons.search,),
+//                 onPressed: (){
+//                   print('Click');
+//                 },
+//               ),
+//               IconButton(
+//                 icon: Icon(Icons.more_vert,),
+//                 onPressed: (){
+//                   print('Click');
+//                 },
+//               )
+//             ],
+//           ),
+//           drawer: Drawer(
+//             child: ListView(
+//               padding: EdgeInsets.zero,
+//               children: <Widget>[
+//                 ListTile(
+//                   leading: Icon(
+//                     Icons.home,
+//                     color: Colors.grey[850],
+//                   ),
+//                   title: Text('Home'),
+//                   onTap: () {
+//                     print('Home click');
+//                   },
+//                   trailing: Icon(Icons.add),
+//                 ),
+//                 ListTile(
+//                   leading: Icon(
+//                     Icons.settings,
+//                     color: Colors.grey[850],
+//                   ),
+//                   title: Text('Setting'),
+//                   onTap: () {
+//                     print('Setting Click');
+//                     Navigator.push(
+//                       context,
+//                       MaterialPageRoute(builder: (context) => SettingTab()),
+//                     );
+//                   },
+//                   trailing: Icon(Icons.add),
+//                 ),
+//                 ListTile(
+//                   leading: Icon(
+//                     Icons.question_answer,
+//                     color: Colors.grey[850],
+//                   ),
+//                   title: Text('Q&A'),
+//                   onTap: () {
+//                     print('Q&A click');
+//                   },
+//                   trailing: Icon(Icons.add),
+//                 )
+//               ],
+//             ),
+//           ),
+//           body: Text('으악'),
+//         )
+//     );
+//   }
+// }
+//
+//
+// class SettingTab extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('Setting'),),
+//     );
+//   }
+// }
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
