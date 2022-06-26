@@ -11,7 +11,7 @@ function Buttons() {
         <Router>
             <Routes>
                 <Route path="/" element={<Login/>}/>
-                <Route path="/Main" element={<Home/>}/>
+                <Route path="/Calendar" element={<Home/>}/>
             </Routes>
         </Router>
     );

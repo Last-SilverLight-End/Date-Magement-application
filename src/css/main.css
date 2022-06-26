@@ -10,6 +10,10 @@
 .TitleText {
     margin-left: 25px;
 }
-.MC{
-    text-align: center;
+.Cal-body{
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
 }
