@@ -1,0 +1,71 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  
+  
+/* 여기서 부터 내가 짠거 확인 바람 */
+
+.login-button{
+    background: transparent;
+    border-radius: 3px;
+    border: 2px solid rgb(97, 129, 236);
+    margin-top: 3rem;
+    color: rgb(123, 191, 247);
+    margin: 1em;
+    padding: 0.25em 1em;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+.login-button:hover{
+    background: transparent;
+    border-radius: 3px;
+    border: 2px solid rgb(168, 220, 255);
+    margin-top: 3rem;
+    color: rgb(88, 235, 235);
+    margin: 1em;
+    padding: 0.25em 1em;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+.login-button:active{
+    box-shadow: 4px 4px 6px 0
+    rgba(255,255,255,.3), -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(36, 36, 36, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}

@@ -4,16 +4,16 @@ import '../css/Calendar.css';
 import "../css/main.css"
 import MenuBar from '../common/menuBar';
 
-function Home() {
+const Home = () => {
 
-    const [value, onChange] = useState(new Date());
+    const [value, setValue] = useState(new Date());
 
     return(
         <div>
             <MenuBar>
             </MenuBar>
             <div className='Cal-body'>
-                <Calendar onChange={onChange} value={value} locale={"en-US"} />
+                <Calendar onChange={setValue} value={value} locale={"en-US"} />
             </div>
         </div>
     );
