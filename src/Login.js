@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import "./App.css";
+import "./css/login.css";
 //import axios from 'axios';
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
@@ -35,7 +35,7 @@ const Login = () =>{
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Link to="/Calendar">
+        <Link to="/Home">
           <button>나와라 얍</button>
         </Link> 
         <form onSubmit={handleSubmit}>
@@ -51,7 +51,7 @@ const Login = () =>{
                     onChange={handleChange}
                 />
 
-                <button type = "submit" disabled = {logincheck} clasName ="">
+                <button type = "submit" disabled = {logincheck} className ="login-button">
                     Login
                 </button>
         </form>    
