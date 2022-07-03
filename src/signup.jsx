@@ -7,11 +7,12 @@ import { Link } from "react-router-dom";
 
 
 
-const signup = () =>{
+const Signup = () =>{
 
-    const [values, setValues] = useState({ id: "", password: "" });
-    const [logincheck, setLoginCheck] = useState(false);
-    
+  const [values, setValues] = useState({ id: "", password: "" });
+  const [logincheck, setLoginCheck] = useState(false);
+  const [email,setEmail] = useState("");
+  const [password,setPassword] = useState("");
     // handleChange 는 여기에다가 맞는지 여부 확인 해야함
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -25,11 +26,15 @@ const signup = () =>{
         setValues({[name] : value});
     }
 
+    const handleJoin = () => {
+
+    }
+
     return (
         <div class="LoginDonghee">
-          <span className="logo">Westagram</span>
+          <span className="logo">Semonet</span>
           <form class="loginBox">
-            <input
+            <input  
               type="text"
               className="id loginInput"
               placeholder="전화번호, 사용자 이름 또는 이메일"
@@ -60,4 +65,4 @@ const signup = () =>{
       );
 }
 
-export default signup;
+export default Signup;
