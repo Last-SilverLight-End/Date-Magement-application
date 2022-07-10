@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import "./css/login.css";
+import logo from "../logo.svg";
+import "../css/login.css"
 //import axios from 'axios';
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
@@ -36,7 +36,9 @@ const Login = () =>{
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Link to="/Home">
-          <button>나와라 얍</button>
+          {/* 카리아씨 나중에 없애라 임시로 만든거 맞제?*/}
+          <button className = "login-button">나와라 달력</button>
+          
         </Link> 
         <form onSubmit={handleSubmit}>
                 <p>ID</p>
@@ -54,15 +56,16 @@ const Login = () =>{
                 <button type = "submit" disabled = {logincheck} className ="login-button">
                     Login
                 </button>
-        </form>    
+        </form>
+        <Link to="/find">
         <a
           className="App-link"
-          href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          비밀번호를 까먹었나 애송이?
         </a>
+        </Link> 
       </header>
     </div>
   );

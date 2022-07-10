@@ -1,0 +1,93 @@
+
+
+
+
+
+
+/*find css 부분 분리할지는 생각 하자 현재야 일해라*/
+
+.find_btn_line{
+    background: transparent;
+    border-radius: 3px;
+    border: 2px solid rgb(97, 129, 236);
+    margin-top: 3rem;
+    color: rgb(123, 191, 247);
+    margin: 1em;
+    padding: 0.5em 1em;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .find_btn_line:hover{
+    background: transparent;
+    border-radius: 3px;
+    border: 2px solid rgb(168, 220, 255);
+    margin-top: 3rem;
+    color: rgb(88, 235, 235);
+    margin: 1em;
+    padding: 0.5em 1em;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+.find_btn_line:active{
+    box-shadow: 4px 4px 6px 0
+    rgba(255,255,255,.3), -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(36, 36, 36, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+.btn_group{
+    padding : 5px;
+    margin : 10px;
+}
+
+
+.input_group_all
+{
+    display :flex;
+    align-items: center;
+    justify-content: center;
+    flex:1;
+    width:30%;
+    height : 30%;
+    padding: 10px;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            margin:5px;
+    background-color: #343a44;
+}
+.input_group
+{
+    padding : 10px;
+    margin : 10px;
+    width:90%;
+    height : 90%;
+    flex:1;
+    flex-direction: column;
+}
+.submit_btn{
+    background: transparent;
+    border-radius: 3px;
+    border: 2px solid rgb(99, 7, 211);
+    margin-top: 3rem;
+    color: rgb(160, 89, 227);
+    margin: 1em;
+    padding: 0.5em 1em;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .submit_btn:hover{
+    background: transparent;
+    border-radius: 3px;
+    border: 2px solid rgb(244, 66, 235);
+    margin-top: 3rem;
+    color: rgb(241, 124, 210);
+    margin: 1em;
+    padding: 0.5em 1em;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+.submit_btn:active{
+    box-shadow: 4px 4px 6px 0
+    rgba(255,255,255,.3), -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(36, 36, 36, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
